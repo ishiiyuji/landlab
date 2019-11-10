@@ -1,6 +1,5 @@
 from .base import (
     ACTIVE_LINK,
-    BAD_INDEX_VALUE,
     CORE_NODE,
     FIXED_GRADIENT_BOUNDARY,
     FIXED_LINK,
@@ -23,7 +22,6 @@ __all__ = [
     "RasterModelGrid",
     "VoronoiDelaunayGrid",
     "NetworkModelGrid",
-    "BAD_INDEX_VALUE",
     "FIXED_VALUE_BOUNDARY",
     "FIXED_GRADIENT_BOUNDARY",
     "LOOPED_BOUNDARY",
