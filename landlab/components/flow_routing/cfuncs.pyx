@@ -39,7 +39,7 @@ cpdef find_lowest_node_on_lake_perimeter_c(
         pit node, then padding values, but it will be updated in place to
         reflect the nodes in the lake.
     pit_count : int
-        The number of nodes currently in the lake. 
+        The number of nodes currently in the lake.
 
     Returns
     -------
