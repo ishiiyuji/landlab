@@ -665,4 +665,4 @@ class SpeciesEvolver(Component):
         else:
             richness_mask = np.zeros(self._grid.number_of_nodes)
 
-        return richness_mask
+        return richness_mask.astype(int)
