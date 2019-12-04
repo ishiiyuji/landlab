@@ -256,7 +256,9 @@ class SpeciesEvolver(Component):
 
         # Create a species richness field.
 
-        _ = grid.add_zeros('species__richness', at='node', clobber=True)
+        _ = grid.add_zeros(
+            'species__richness', at='node', dtype=int, clobber=True
+        )
 
     @property
     def record_data_frame(self):
@@ -661,8 +663,8 @@ class SpeciesEvolver(Component):
 
         if species:
             masks = np.stack([s.range_mask for s in species])
-            richness_mask = sum(masks)
+            richness_mask = sum(masks).astype(int)
         else:
-            richness_mask = np.zeros(self._grid.number_of_nodes)
+            richness_mask = np.zeros(self._grid.number_of_nodes, dtype=int)
 
-        return richness_mask.astype(int)
+        return richness_mask
